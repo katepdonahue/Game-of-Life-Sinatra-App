@@ -13,15 +13,21 @@ Bundler.require
 class App < Sinatra::Application
   @@my_game = Game.new(30, 30)
   @@my_game.se_glider(1,0).ne_glider(27, 2)
+  @@time = 0
 
   get '/' do
+    if @@time > 0
+      @@my_game.generation
+    end
     @board = @@my_game.screen.board
+    @@time += 1
     erb :index
   end
+
   # @my_game.screen.print_screen
   # loop do
   #   sleep(0.2)
-  #   @my_game.generation.print_screen
+  #   @my_game.generation
   # end
 
 end

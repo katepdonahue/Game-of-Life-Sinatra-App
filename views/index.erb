@@ -2,7 +2,7 @@
 <ul>
 	<% @board.each do |array| %>
 		<li><% array.each do |cell| %>
-			<%= cell.state %>&nbsp;&nbsp;
+			<%= cell.state %>
 			<% end %>
 		</li>
 	<% end %>
