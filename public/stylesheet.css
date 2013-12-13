@@ -1,9 +1,11 @@
 body {
+	background-color: black;
 }
 
 ul {
 	list-style-type: none;
 	font-family: 'Courier';
+	color: white;
 }
 
 
