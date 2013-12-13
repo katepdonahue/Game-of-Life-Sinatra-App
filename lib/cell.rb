@@ -1,5 +1,3 @@
-require 'debugger'
-
 class Cell
   attr_accessor :state, :screen, :h, :w
   attr_reader :neighbors, :game_object
