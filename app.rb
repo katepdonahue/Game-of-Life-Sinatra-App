@@ -4,17 +4,23 @@
 # 4 - 8 live neighbors: dies
 ## dead cells:
 # 3 live neighbors: comes back to life
-require 'debugger'
-require './board/board'
-require './game/game'
-require './cell/cell'
+require './lib/board'
+require './lib/game'
+require './lib/cell'
+require 'bundler'
+Bundler.require
 
+class App < Sinatra::Application
+  @my_game = Game.new(30, 30)
+  @my_game.se_glider(1,0).ne_glider(27, 2)
 
-my_game = Game.new(30, 30)
+  get '/' do
+    erb :index
+  end
+  # @my_game.screen.print_screen
+  # loop do
+  #   sleep(0.2)
+  #   @my_game.generation.print_screen
+  # end
 
-my_game.se_glider(1,0).ne_glider(27, 2)
-my_game.screen.print_screen
-loop do
-  sleep(0.2)
-  my_game.generation.print_screen
 end
