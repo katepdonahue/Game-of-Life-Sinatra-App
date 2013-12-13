@@ -11,10 +11,11 @@ require 'bundler'
 Bundler.require
 
 class App < Sinatra::Application
-  @my_game = Game.new(30, 30)
-  @my_game.se_glider(1,0).ne_glider(27, 2)
+  @@my_game = Game.new(30, 30)
+  # @@my_game.se_glider(1,0).ne_glider(27, 2)
 
   get '/' do
+    @board = @@my_game.screen.board
     erb :index
   end
   # @my_game.screen.print_screen

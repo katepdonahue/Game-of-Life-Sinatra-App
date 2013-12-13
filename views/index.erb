@@ -1,1 +1,18 @@
-<%= @my_game.screen.board %>
+
+<ul>
+	<% @board.each do |array| %>
+		<li><% array.each do |cell| %>
+			<%= cell.state %>&nbsp;&nbsp;
+			<% end %>
+		</li>
+	<% end %>
+</ul>
+
+<!--  def print_screen
+    board.each do |array|
+      array.each do |cell|
+        print "#{cell.state}  "
+      end
+      print "\n"
+    end
+  end -->
