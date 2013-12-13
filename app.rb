@@ -11,9 +11,11 @@ require 'bundler'
 Bundler.require
 
 class App < Sinatra::Application
-  @@my_game = Game.new(30, 30)
-  @@my_game.se_glider(1,0).ne_glider(27, 2)
-  @@time = 0
+  before do
+    @@my_game = Game.new(30, 30)
+    @@my_game.se_glider(1,0).ne_glider(27, 2)
+    @@time = 0
+  end
 
   get '/' do
     if @@time > 0
