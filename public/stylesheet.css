@@ -12,4 +12,11 @@ p, label {
 	color: white;
 }
 
+#nav {
+	width: 590px;
+	padding-left: 40px;
+}
 
+#begin {
+	margin-left: 505px;
+}

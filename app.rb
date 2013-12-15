@@ -41,4 +41,10 @@ class App < Sinatra::Application
     erb :play
   end
 
+  get '/clear' do
+    @@my_game = Game.new(30, 30)
+    @board = @@my_game.screen.board
+    erb :index
+  end
+
 end
