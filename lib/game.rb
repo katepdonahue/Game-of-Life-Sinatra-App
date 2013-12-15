@@ -30,6 +30,7 @@ class Game
 ######### methods for setting initial state ###########
   def filler(y, x)
     screen.board[y][x].state = "o"
+    self
   end
 
   def block(y, x)

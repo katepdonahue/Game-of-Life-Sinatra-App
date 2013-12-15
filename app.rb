@@ -15,14 +15,19 @@ class App < Sinatra::Application
     @@my_game = Game.new(30, 30)
     # @@my_game.se_glider(1,0).ne_glider(27, 2)
     @@time = 0
+    @@count = 0
+    @@hash = {}
 
   get '/' do
     @board = @@my_game.screen.board
     erb :index
   end
 
-  post '/' do
-    @board = @@my_game.send(params["method"]).screen.board
+  post '/add' do
+    @@count += 1
+    @@hash[@@count] = params #shouldn't actually need this in the end
+    @@my_game = @@my_game.send(params["method"], params["y"].to_i, params["x"].to_i)
+    @board = @@my_game.screen.board
     erb :index
   end
 
