@@ -1,7 +1,9 @@
-<form action="/" method="POST">
+<p><%= params.inspect %></p>
 
-	<label for="POST-item">Style:</label>
-	<select id="POST-item" name="method">
+<form action="/add" method="POST">
+
+	<label for="POST-method">Style:</label>
+	<select id="POST-method" name="item<%= @count %>[method]">
 		<option value="filler">Single Cell</option>
 		<option value="block">Square Block</option>
 		<option value="ne_glider">North-East Glider</option>
@@ -11,9 +13,9 @@
 	</select>
 
 	<label for="POST-ycoord">Coordinates: y=</label>
-	<input id="POST-ycoord" type="text" name="y">
+	<input id="POST-ycoord" type="text" name="item<%= @count %>[y]">
 	<label for="POST-xcoord"> x=</label>
-	<input id="POST-xcoord" type="text" name="x">
+	<input id="POST-xcoord" type="text" name="item<%= @count %>[x]">
 
 	<button type="submit" value="Add">Add it!</button>
 
@@ -27,4 +29,4 @@
 		</li>
 	<% end %>
 </ul>
-<%= params.inspect %>
+
