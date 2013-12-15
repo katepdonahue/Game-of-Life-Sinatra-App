@@ -15,6 +15,7 @@ p, label {
 #nav {
 	width: 590px;
 	padding-left: 40px;
+	text-decoration: none;
 }
 
 #begin {
