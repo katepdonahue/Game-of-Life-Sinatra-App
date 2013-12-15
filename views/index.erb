@@ -1,3 +1,21 @@
+<form action="/" method="POST">
+
+	<label for="POST-item">Style:</label>
+	<select id="POST-item" name="method">
+		<option value="filler">Single Cell</option>
+		<option value="block">Square Block</option>
+		<option value="ne_glider">North-East Glider</option>
+		<option value="se_glider">South-East Glider</option>
+		<option value="r_spaceship">Right Spaceship</option>
+		<option value="l_spaceship">Left Spaceship</option>
+	</select>
+
+	<label for="POST-ycoord">Coordinates: y=</label>
+	<input id="POST-ycoord" type="text" name="y">
+	<label for="POST-xcoord"> x=</label>
+	<input id="POST-xcoord" type="text" name="x">
+
+</form>
 
 <ul>
 	<% @board.each do |array| %>
@@ -7,3 +25,4 @@
 		</li>
 	<% end %>
 </ul>
+<%= params.inspect %>

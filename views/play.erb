@@ -1,0 +1,11 @@
+<head>
+<meta http-equiv="refresh" content="0.1">
+</head>
+<ul>
+	<% @board.each do |array| %>
+		<li><% array.each do |cell| %>
+			<%= cell.state %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>
