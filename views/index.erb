@@ -3,7 +3,7 @@
 <form action="/add" method="POST">
 
 	<label for="POST-method">Style:</label>
-	<select id="POST-method" name="item<%= @count %>[method]">
+	<select id="POST-method" name="method">
 		<option value="filler">Single Cell</option>
 		<option value="block">Square Block</option>
 		<option value="ne_glider">North-East Glider</option>
@@ -13,9 +13,9 @@
 	</select>
 
 	<label for="POST-ycoord">Coordinates: y=</label>
-	<input id="POST-ycoord" type="text" name="item<%= @count %>[y]">
+	<input id="POST-ycoord" type="text" name="y">
 	<label for="POST-xcoord"> x=</label>
-	<input id="POST-xcoord" type="text" name="item<%= @count %>[x]">
+	<input id="POST-xcoord" type="text" name="x">
 
 	<button type="submit" value="Add">Add it!</button>
 
