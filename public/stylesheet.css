@@ -7,26 +7,63 @@ ul {
 	list-style-type: none;
 	font-family: 'Courier';
 	color: white;
+	padding: 0;
+}
+
+input {
+	max-width: 30px;
 }
 
 p, label {
 	color: white;
 }
 
+.container {
+	width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+.form {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.under_form {
+	width: 740px;
+	height: auto;
+	overflow: auto;
+}
+
+.board {
+	height: 640px;
+	width: 590px;
+	float: left;
+	position: relative;
+}
+
 #nav {
 	width: 590px;
-	padding-left: 40px;
+	overflow: auto;
+}
+
+#clear {
+	float:left;
 	text-decoration: none;
 }
 
 #begin {
-	margin-left: 505px;
-}
-
-.content {
-	float: left;
+	float: right;
+	text-decoration: none;
 }
 
 .help {
+	padding-top: 15px;
+	height: 200px;
 	float: right;
+}
+
+.help, p {
+	font-size: 15px;
 }

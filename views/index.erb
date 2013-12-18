@@ -1,6 +1,6 @@
 <div class="container">
 
-	<div class="content" >
+	<div class="form" >
 
 		<form action="/add" method="POST">
 			<label for="POST-method">Style:</label>
@@ -21,25 +21,31 @@
 			<button type="submit" value="Add">Come my minions, rise for your master!</button>
 		</form>
 
-		<ul>
-			<% @board.each do |array| %>
-				<li><% array.each do |cell| %>
-					<%= cell.state %>
-					<% end %>
-				</li>
-			<% end %>
-		</ul>
-
-		<div id="nav">
-			<a id="clear" href="/clear">Clear</a>
-			<a id="begin" href="/play">Begin!</a>
-		</div>
-
 	</div>
 
-	<div class="help">
-		<img src="./images/help.png">
-		<!-- <p>?<br/><br/><br/><br/><br/><br/>CONWAY'S GAME OF LIFE:<br/>Enter x and y coordinates<br/>to add live cells to the<br/>board. The gliders move<br/>diagonally and the space-<br/>ships move horizontally.</p> -->
+	<div class="under_form">
+
+		<div class="board">
+			<ul>
+				<% @board.each do |array| %>
+					<li><% array.each do |cell| %>
+						<%= cell.state %>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+
+			<div id="nav">
+				<a id="clear" href="/clear">Clear</a>
+				<a id="begin" href="/play">Begin!</a>
+			</div>
+
+		</div>
+
+		<div class="help">
+			<img src="./images/help.png">
+			<!-- <p>?<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>CONWAY'S GAME<br/>OF LIFE:<br/>Enter x and y<br/>coordinates<br/>to add live<br/>cells to the<br/>board. The<br/>gliders move<br/>diagonally<br/>and the space-<br/>ships move<br/>horizontally.</p> -->
+		</div>
 	</div>
 
 </div>
