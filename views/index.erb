@@ -1,36 +1,46 @@
+<div class="container">
 
-<form action="/add" method="POST">
+	<div class="content" >
 
-	<label for="POST-method">Style:</label>
-	<select id="POST-method" name="method">
-		<option value="filler">Single Cell</option>
-		<option value="block">Square Block</option>
-		<option value="ne_glider">North-East Glider</option>
-		<option value="se_glider">South-East Glider</option>
-		<option value="r_spaceship">Right Spaceship</option>
-		<option value="l_spaceship">Left Spaceship</option>
-	</select>
+		<form action="/add" method="POST">
+			<label for="POST-method">Style:</label>
+			<select id="POST-method" name="method">
+				<option value="filler">Single Cell</option>
+				<option value="block">Square Block</option>
+				<option value="ne_glider">North-East Glider</option>
+				<option value="se_glider">South-East Glider</option>
+				<option value="r_spaceship">Right Spaceship</option>
+				<option value="l_spaceship">Left Spaceship</option>
+			</select>
 
-	<label for="POST-ycoord">Coordinates: y=</label>
-	<input id="POST-ycoord" type="text" name="y">
-	<label for="POST-xcoord"> x=</label>
-	<input id="POST-xcoord" type="text" name="x">
+			<label for="POST-ycoord">Coordinates: y=</label>
+			<input id="POST-ycoord" type="text" name="y">
+			<label for="POST-xcoord"> x=</label>
+			<input id="POST-xcoord" type="text" name="x">
 
-	<button type="submit" value="Add">Come my minions, rise for your master!</button>
+			<button type="submit" value="Add">Come my minions, rise for your master!</button>
+		</form>
 
-</form>
-
-<ul>
-	<% @board.each do |array| %>
-		<li><% array.each do |cell| %>
-			<%= cell.state %>
+		<ul>
+			<% @board.each do |array| %>
+				<li><% array.each do |cell| %>
+					<%= cell.state %>
+					<% end %>
+				</li>
 			<% end %>
-		</li>
-	<% end %>
-</ul>
+		</ul>
 
-<div id="nav">
-	<a id="clear" href="/clear">Clear</a>
-	<a id="begin" href="/play">Begin!</a>
+		<div id="nav">
+			<a id="clear" href="/clear">Clear</a>
+			<a id="begin" href="/play">Begin!</a>
+		</div>
+
+	</div>
+
+	<div class="help">
+		<img src="./images/help.png">
+		<!-- <p>?<br/><br/><br/><br/><br/><br/>CONWAY'S GAME OF LIFE:<br/>Enter x and y coordinates<br/>to add live cells to the<br/>board. The gliders move<br/>diagonally and the space-<br/>ships move horizontally.</p> -->
+	</div>
+
 </div>
 

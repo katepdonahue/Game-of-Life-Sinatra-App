@@ -1,5 +1,6 @@
 body {
 	background-color: black;
+	font-family: 'Courier';
 }
 
 ul {
@@ -20,4 +21,12 @@ p, label {
 
 #begin {
 	margin-left: 505px;
+}
+
+.content {
+	float: left;
+}
+
+.help {
+	float: right;
 }
