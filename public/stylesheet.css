@@ -26,14 +26,17 @@ p, label {
 }
 
 .form {
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	position: absolute;
 }
 
 .under_form {
 	width: 740px;
 	height: auto;
 	overflow: auto;
+	margin-top: 40px;
 }
 
 .board {

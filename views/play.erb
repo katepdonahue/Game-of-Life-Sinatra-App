@@ -1,15 +1,34 @@
 <head>
 <meta http-equiv="refresh" content="0.1">
 </head>
-<ul>
-	<% @board.each do |array| %>
-		<li><% array.each do |cell| %>
-			<%= cell.state %>
-			<% end %>
-		</li>
-	<% end %>
-</ul>
 
-<div id="nav">
-	<a id="begin" href="/clear">Play Again</a>
+
+<div class="container">
+
+
+	<div class="under_form">
+
+		<div class="board">
+
+			<ul>
+				<% @board.each do |array| %>
+					<li><% array.each do |cell| %>
+						<%= cell.state %>
+						<% end %>
+					</li>
+				<% end %>
+			</ul>
+
+			<div id="nav">
+				<a id="begin" href="/clear">Play Again</a>
+			</div>
+
+		</div>
+
+		<div class="help">
+
+		</div>
+	</div>
+
 </div>
+
