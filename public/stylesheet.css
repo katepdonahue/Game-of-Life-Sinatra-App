@@ -62,8 +62,16 @@ p, label {
 	padding-top: 15px;
 	height: 200px;
 	float: right;
+	overflow: hidden;
 }
 
-.help, p {
-	font-size: 15px;
+.help:hover {
+	overflow: visible;
+	margin-top: -200px;
+	padding: -200px;
+}
+
+.img:hover {
+	
+	/*overflow: hidden;*/
 }
